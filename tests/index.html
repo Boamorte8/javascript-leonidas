@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testing things</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .container {
+      width: 100%;
+      border: 1px solid red;
+      display: flex;
+      padding: 1em;
+      flex-wrap: wrap;
+      gap: 0.5em;
+    }
+
+    .item {
+      background-color: green;
+      height: 5em;
+      width: calc(25% - .5em);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+  <script>
+    class Pokemon {
+      testingVariable = 'Testing changes';
+      #privateTestingVariable = 'Cant change';
+    }
+
+    const pikachu = new Pokemon();
+    console.log('Before changes');
+    console.log(pikachu.testingVariable, pikachu.privateTestingVariable);
+
+    pikachu.testingVariable = 'Testing changed 001';
+    pikachu.privateTestingVariable = 'Testing changed 002';
+
+    console.log('After changes');
+    console.log(pikachu.testingVariable, pikachu.privateTestingVariable);
+  </script>
+</body>
+
+</html>
